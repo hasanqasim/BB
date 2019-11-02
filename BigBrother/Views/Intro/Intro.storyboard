@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="keW-iR-VH9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="hf4-yD-eRX">
+            <objects>
+                <viewController id="keW-iR-VH9" customClass="IntroViewController" customModule="BigBrother" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Nm-W4-B6O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="OS7-a4-5SR" customClass="UIImageViewX" customModule="BigBrother" customModuleProvider="target">
+                                <rect key="frame" x="112" y="78" width="190" height="190"/>
+                                <color key="backgroundColor" name="Light"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="4Tb-wK-KBC"/>
+                                    <constraint firstAttribute="width" secondItem="OS7-a4-5SR" secondAttribute="height" multiplier="1:1" id="Rmd-Pg-S1z"/>
+                                    <constraint firstAttribute="height" constant="190" id="or3-kF-t8Y"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="95"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mb5-Cx-tJd" customClass="UIViewX" customModule="BigBrother" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="324" width="414" height="572"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to BigBrother" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeU-oz-dM8">
+                                        <rect key="frame" x="8" y="69" width="398" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="UHW-Fp-GCe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="30"/>
+                                        <color key="textColor" name="Text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan the bar code on the device to register it" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh0-sC-chB">
+                                        <rect key="frame" x="8" y="158" width="398" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="85" id="Uqu-3l-qCP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="21"/>
+                                        <color key="textColor" name="Text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qx7-rA-zh6" customClass="UIButtonX" customModule="BigBrother" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="380" width="398" height="42"/>
+                                        <color key="backgroundColor" name="Light"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="cPa-xT-bXR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                        <state key="normal" title="Start Scanning">
+                                            <color key="titleColor" name="Text"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="scanButton:" destination="keW-iR-VH9" eventType="touchUpInside" id="PF1-TD-iSU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="Secondary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="572" id="H1v-7x-562"/>
+                                    <constraint firstItem="gh0-sC-chB" firstAttribute="top" secondItem="TeU-oz-dM8" secondAttribute="bottom" constant="49" id="IHC-ae-iqN"/>
+                                    <constraint firstItem="TeU-oz-dM8" firstAttribute="leading" secondItem="mb5-Cx-tJd" secondAttribute="leading" constant="8" id="Lu1-EY-oxg"/>
+                                    <constraint firstItem="TeU-oz-dM8" firstAttribute="top" secondItem="mb5-Cx-tJd" secondAttribute="top" constant="69" id="QEm-ck-mAn"/>
+                                    <constraint firstAttribute="trailing" secondItem="gh0-sC-chB" secondAttribute="trailing" constant="8" id="TWu-pm-DwC"/>
+                                    <constraint firstAttribute="bottom" secondItem="qx7-rA-zh6" secondAttribute="bottom" constant="150" id="XPU-aZ-rk6"/>
+                                    <constraint firstItem="gh0-sC-chB" firstAttribute="leading" secondItem="mb5-Cx-tJd" secondAttribute="leading" constant="8" id="ZE8-9l-ZGS"/>
+                                    <constraint firstItem="qx7-rA-zh6" firstAttribute="leading" secondItem="mb5-Cx-tJd" secondAttribute="leading" constant="8" id="aZU-Mp-7l8"/>
+                                    <constraint firstAttribute="trailing" secondItem="TeU-oz-dM8" secondAttribute="trailing" constant="8" id="kB4-yd-B5O"/>
+                                    <constraint firstAttribute="trailing" secondItem="qx7-rA-zh6" secondAttribute="trailing" constant="8" id="tx3-7o-xFQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="Primary"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="mb5-Cx-tJd" secondAttribute="bottom" id="2th-PV-R4v"/>
+                            <constraint firstItem="mb5-Cx-tJd" firstAttribute="leading" secondItem="ido-PA-v79" secondAttribute="leading" id="M0e-ds-Z3M"/>
+                            <constraint firstItem="OS7-a4-5SR" firstAttribute="centerX" secondItem="ido-PA-v79" secondAttribute="centerX" id="VMy-xn-AKF"/>
+                            <constraint firstItem="OS7-a4-5SR" firstAttribute="top" secondItem="ido-PA-v79" secondAttribute="top" constant="34" id="cUu-0L-YVM"/>
+                            <constraint firstItem="mb5-Cx-tJd" firstAttribute="trailing" secondItem="ido-PA-v79" secondAttribute="trailing" id="y1U-i2-Dd7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ido-PA-v79"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="gh0-sC-chB" id="hTI-yG-KMQ"/>
+                        <outlet property="scanButtonRef" destination="qx7-rA-zh6" id="Bqf-PM-zOZ"/>
+                        <outlet property="welcomeLabel" destination="TeU-oz-dM8" id="i9U-cY-500"/>
+                        <segue destination="Xpe-2n-zUq" kind="presentation" identifier="Scan" id="g9D-fA-nG4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hlC-gR-kkF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147.82608695652175" y="151.33928571428569"/>
+        </scene>
+        <!--Scan-->
+        <scene sceneID="6X0-Yx-ukA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Scan" id="Xpe-2n-zUq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1t-sJ-uOu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1034.7826086956522" y="150.66964285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="100" height="100"/>
+        <namedColor name="Light">
+            <color red="0.043137254901960784" green="0.15294117647058825" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="0.061999998986721039" green="0.061999998986721039" blue="0.12399999797344208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary">
+            <color red="0.10400000214576721" green="0.12600000202655792" blue="0.23600000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.84700000286102295" green="0.84799998998641968" blue="0.85500001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
