@@ -16,9 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //UINavigationBar.appearance().backgroundColor = UIColor(named: "Primary")
+        
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        //let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "onboard")
-        let vc = UIStoryboard(name: "Intro", bundle: nil).instantiateInitialViewController()
+       
+        var storyboard: UIStoryboard
+        /*if UserDefaults.standard.value(forKey: "deviceID") as? String == nil {
+            storyboard = UIStoryboard(name: "Intro", bundle: nil)
+        }
+        else {
+            storyboard = UIStoryboard(name: "Login", bundle: nil)
+        }*/
+        storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let vc = storyboard.instantiateInitialViewController()
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
         

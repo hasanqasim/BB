@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="goX-Fl-3Kh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Interaction View Controller-->
+        <scene sceneID="mGu-D7-qrn">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" modalTransitionStyle="crossDissolve" id="goX-Fl-3Kh" customClass="InteractionViewController" customModule="BigBrother" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xhK-Vy-m6f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wnw-Sb-saB">
+                                <rect key="frame" x="0.0" y="314.5" width="414" height="277"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mA-PQ-0XC" customClass="UIButtonX" customModule="BigBrother" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="23.5" width="374" height="40"/>
+                                        <color key="backgroundColor" name="Light"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="43S-3T-bVN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" name="Text"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEJ-2C-98z" customClass="UIButtonX" customModule="BigBrother" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="118.5" width="374" height="40"/>
+                                        <color key="backgroundColor" name="Light"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="y1s-pu-RQb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" name="Text"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4t-Sh-E2x" customClass="UIButtonX" customModule="BigBrother" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="213.5" width="374" height="40"/>
+                                        <color key="backgroundColor" name="Light"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="vY4-zZ-Kjo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" name="Text"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5mA-PQ-0XC" secondAttribute="trailing" constant="20" id="3wT-a0-0vc"/>
+                                    <constraint firstAttribute="height" constant="277" id="48X-BS-q6u"/>
+                                    <constraint firstItem="5mA-PQ-0XC" firstAttribute="leading" secondItem="Wnw-Sb-saB" secondAttribute="leading" constant="20" id="9ud-JH-JKN"/>
+                                    <constraint firstAttribute="trailing" secondItem="CEJ-2C-98z" secondAttribute="trailing" constant="20" id="A56-f9-Vmo"/>
+                                    <constraint firstItem="CEJ-2C-98z" firstAttribute="top" secondItem="5mA-PQ-0XC" secondAttribute="bottom" constant="55" id="GeO-bx-7IH"/>
+                                    <constraint firstItem="CEJ-2C-98z" firstAttribute="centerY" secondItem="Wnw-Sb-saB" secondAttribute="centerY" id="MKR-WN-egw"/>
+                                    <constraint firstItem="CEJ-2C-98z" firstAttribute="leading" secondItem="Wnw-Sb-saB" secondAttribute="leading" constant="20" id="hG1-pX-NFh"/>
+                                    <constraint firstItem="s4t-Sh-E2x" firstAttribute="top" secondItem="CEJ-2C-98z" secondAttribute="bottom" constant="55" id="w6t-Is-zBZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="s4t-Sh-E2x" secondAttribute="trailing" constant="20" id="wXv-CI-3bE"/>
+                                    <constraint firstItem="s4t-Sh-E2x" firstAttribute="leading" secondItem="Wnw-Sb-saB" secondAttribute="leading" constant="20" id="zjE-cs-eDf"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyF-3X-wfk" customClass="UIButtonX" customModule="BigBrother" customModuleProvider="target">
+                                <rect key="frame" x="20" y="44" width="50" height="50"/>
+                                <color key="backgroundColor" name="Light"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Whk-a3-qUb"/>
+                                    <constraint firstAttribute="height" constant="50" id="brL-Jf-6Fo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" name="Text"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelButton:" destination="goX-Fl-3Kh" eventType="touchUpInside" id="TM0-lZ-zHJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="Primary"/>
+                        <constraints>
+                            <constraint firstItem="RyF-3X-wfk" firstAttribute="top" secondItem="s5w-Fi-gqC" secondAttribute="top" id="0fC-yn-mRL"/>
+                            <constraint firstItem="Wnw-Sb-saB" firstAttribute="centerY" secondItem="s5w-Fi-gqC" secondAttribute="centerY" id="JCU-wm-zRm"/>
+                            <constraint firstItem="Wnw-Sb-saB" firstAttribute="trailing" secondItem="s5w-Fi-gqC" secondAttribute="trailing" id="OJT-ht-P8x"/>
+                            <constraint firstItem="RyF-3X-wfk" firstAttribute="leading" secondItem="s5w-Fi-gqC" secondAttribute="leading" constant="20" id="YaE-qs-RrG"/>
+                            <constraint firstItem="Wnw-Sb-saB" firstAttribute="leading" secondItem="s5w-Fi-gqC" secondAttribute="leading" id="vuA-lB-HVm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s5w-Fi-gqC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="32f-Dc-rIe"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5an-RN-Uya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1366.6666666666667" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Light">
+            <color red="0.043137254901960784" green="0.15294117647058825" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="0.061999998986721039" green="0.061999998986721039" blue="0.12399999797344208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.84700000286102295" green="0.84799998998641968" blue="0.85500001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
