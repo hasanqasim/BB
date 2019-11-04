@@ -3,4 +3,69 @@
    uuid = "A10E6ECB-2F04-41B9-AA18-F72D8AB45ABA"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "40B1C792-8D4A-4ACA-847E-5C0F7A3C3C6E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BigBrother/Views/InteractionOptions/InteractionOptionsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "40B1C792-8D4A-4ACA-847E-5C0F7A3C3C6E - 6b050011f899dfe3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BigBrother.InteractionOptionsViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "BigBrother"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ayaz/Documents/GitHub/BigBrother/BigBrother/Views/InteractionOptions/InteractionOptionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "450">
+               </Location>
+               <Location
+                  uuid = "40B1C792-8D4A-4ACA-847E-5C0F7A3C3C6E - 6b050011f899dfe3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BigBrother.InteractionOptionsViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "BigBrother"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ayaz/Documents/GitHub/BigBrother/BigBrother/Views/InteractionOptions/InteractionOptionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1271">
+               </Location>
+               <Location
+                  uuid = "40B1C792-8D4A-4ACA-847E-5C0F7A3C3C6E - 6b050011f899dfe3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BigBrother.InteractionOptionsViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "BigBrother"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ayaz/Documents/GitHub/BigBrother/BigBrother/Views/InteractionOptions/InteractionOptionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "2092">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

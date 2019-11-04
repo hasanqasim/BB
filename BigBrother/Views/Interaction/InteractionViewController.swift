@@ -10,6 +10,20 @@ import UIKit
 
 class InteractionViewController: UIViewController {
 
+    @IBAction func sendTextButton(_ sender: Any) {
+        performSegue(withIdentifier: "options", sender: "Send Text")
+    }
+    
+    @IBAction func sendAudioButton(_ sender: Any) {
+        performSegue(withIdentifier: "options", sender: "Send Audio Message")
+    }
+    
+    @IBAction func playMusicButton(_ sender: Any) {
+        performSegue(withIdentifier: "options", sender: "Play Music")
+    }
+    
+    
+    
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -19,6 +33,11 @@ class InteractionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let sender = sender as! String
+        let vc = segue.destination as! InteractionOptionsViewController
+        vc.option = sender
+    }
 
 
 }

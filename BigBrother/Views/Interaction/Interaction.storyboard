@@ -27,7 +27,7 @@
                                             <constraint firstAttribute="height" constant="40" id="43S-3T-bVN"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Send Text">
                                             <color key="titleColor" name="Text"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -35,6 +35,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sendTextButton:" destination="goX-Fl-3Kh" eventType="touchUpInside" id="UW2-si-2Xx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEJ-2C-98z" customClass="UIButtonX" customModule="BigBrother" customModuleProvider="target">
                                         <rect key="frame" x="20" y="118.5" width="374" height="40"/>
@@ -43,7 +46,7 @@
                                             <constraint firstAttribute="height" constant="40" id="y1s-pu-RQb"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Send Audio Message">
                                             <color key="titleColor" name="Text"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -51,6 +54,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sendAudioButton:" destination="goX-Fl-3Kh" eventType="touchUpInside" id="XCV-Jm-5ND"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4t-Sh-E2x" customClass="UIButtonX" customModule="BigBrother" customModuleProvider="target">
                                         <rect key="frame" x="20" y="213.5" width="374" height="40"/>
@@ -59,7 +65,7 @@
                                             <constraint firstAttribute="height" constant="40" id="vY4-zZ-Kjo"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Play Music">
                                             <color key="titleColor" name="Text"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -67,6 +73,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="playMusicButton:" destination="goX-Fl-3Kh" eventType="touchUpInside" id="XOn-uR-fTm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -84,7 +93,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyF-3X-wfk" customClass="UIButtonX" customModule="BigBrother" customModuleProvider="target">
-                                <rect key="frame" x="20" y="44" width="50" height="50"/>
+                                <rect key="frame" x="20" y="64" width="50" height="50"/>
                                 <color key="backgroundColor" name="Light"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Whk-a3-qUb"/>
@@ -118,21 +127,31 @@
                         </subviews>
                         <color key="backgroundColor" name="Primary"/>
                         <constraints>
-                            <constraint firstItem="RyF-3X-wfk" firstAttribute="top" secondItem="s5w-Fi-gqC" secondAttribute="top" id="0fC-yn-mRL"/>
                             <constraint firstItem="Wnw-Sb-saB" firstAttribute="centerY" secondItem="s5w-Fi-gqC" secondAttribute="centerY" id="JCU-wm-zRm"/>
                             <constraint firstItem="Wnw-Sb-saB" firstAttribute="trailing" secondItem="s5w-Fi-gqC" secondAttribute="trailing" id="OJT-ht-P8x"/>
                             <constraint firstItem="RyF-3X-wfk" firstAttribute="leading" secondItem="s5w-Fi-gqC" secondAttribute="leading" constant="20" id="YaE-qs-RrG"/>
+                            <constraint firstItem="RyF-3X-wfk" firstAttribute="top" secondItem="s5w-Fi-gqC" secondAttribute="top" constant="20" id="c18-ZH-vf2"/>
                             <constraint firstItem="Wnw-Sb-saB" firstAttribute="leading" secondItem="s5w-Fi-gqC" secondAttribute="leading" id="vuA-lB-HVm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s5w-Fi-gqC"/>
                     </view>
                     <navigationItem key="navigationItem" id="32f-Dc-rIe"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <segue destination="xEi-9n-24d" kind="presentation" identifier="options" id="AcW-3o-6yT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5an-RN-Uya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1366.6666666666667" y="95.758928571428569"/>
+        </scene>
+        <!--InteractionOptions-->
+        <scene sceneID="m1r-1m-FCL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InteractionOptions" id="xEi-9n-24d" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gOp-Vo-h4Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2291.304347826087" y="95.758928571428569"/>
         </scene>
     </scenes>
     <resources>
