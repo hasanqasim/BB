@@ -8,11 +8,14 @@
 
 import UIKit
 import Firebase
+import AWSS3
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var databaseController: DatabaseProtocol?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -33,6 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let vc = storyboard.instantiateInitialViewController()
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
+        
+        databaseController = FirebaseController()
+        initializeS3()
         
         return true
     }
@@ -59,6 +65,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
+
+extension AppDelegate {
+    func initializeS3() {
+        let poolId = "ap-southeast-2:6db7054e-c739-430d-a6ee-e82cf1da6bcb" // 3-1
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .APSoutheast2, identityPoolId: poolId)//3-2
+        let configuration = AWSServiceConfiguration(region: .APSoutheast2, credentialsProvider: credentialsProvider)
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
+    }
+}
+
 

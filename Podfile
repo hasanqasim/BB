@@ -7,8 +7,12 @@ target 'BigBrother' do
 
   # Pods for BigBrother
 
-  pod 'RevealingSplashView'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Firestore'
+  	pod 'RevealingSplashView'
+  	pod 'Firebase/Auth'
+ 	pod 'Firebase/Firestore'
+	pod 'Firebase/Core'
+	pod 'Firebase/Storage'
+	pod 'MJPEGStreamLib'
+	pod 'AWSS3'
   
 end
