@@ -6,5 +6,9 @@ target 'BigBrother' do
   use_frameworks!
 
   # Pods for BigBrother
+
   pod 'RevealingSplashView'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  
 end

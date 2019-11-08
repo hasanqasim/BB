@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>482217495753-dklsk5tdne49fgomfahkunvo5u65mv25.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.482217495753-dklsk5tdne49fgomfahkunvo5u65mv25</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB_yyugg3ZZEf3fL1gBLSORpYb8Rd3eT6g</string>
+	<key>GCM_SENDER_ID</key>
+	<string>482217495753</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>edu.com.monash.BigBrother</string>
+	<key>PROJECT_ID</key>
+	<string>login-register-test-ebef1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>login-register-test-ebef1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:482217495753:ios:34ff918e1e6e19e214d118</string>
+	<key>DATABASE_URL</key>
+	<string>https://login-register-test-ebef1.firebaseio.com</string>
+</dict>
+</plist>

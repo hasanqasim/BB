@@ -159,6 +159,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="LiF-Es-546"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJC-Mu-b1w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -189,6 +190,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ulJ-fg-aaJ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Xx-PY-reF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -17,41 +17,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TzD-Rp-7lO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="Primary"/>
-                                <color key="barTintColor" name="Primary"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" name="Text"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Registration" id="w6z-bj-tWc">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Dd6-dE-JBK">
-                                            <color key="tintColor" name="Text"/>
-                                            <connections>
-                                                <action selector="cancelButton:" destination="9eE-GL-2eO" id="C8z-V0-yjN"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLy-zj-2ug" customClass="UIButtonX" customModule="BigBrother" customModuleProvider="target">
+                                <rect key="frame" x="20" y="64" width="50" height="50"/>
+                                <color key="backgroundColor" name="Light"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Spk-qw-zkj"/>
+                                    <constraint firstAttribute="height" constant="50" id="ed8-b1-mJh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" name="Text"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelButton:" destination="9eE-GL-2eO" eventType="touchUpInside" id="KVj-E3-Qt8"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Whh-74-Qs9" customClass="UIViewX" customModule="BigBrother" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="199" width="414" height="697"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z45-9I-oEA">
+                                        <rect key="frame" x="8" y="55" width="398" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kyo-49-hnJ">
+                                        <rect key="frame" x="8" y="139" width="398" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NQu-WG-kb4">
+                                        <rect key="frame" x="8" y="222" width="398" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCw-K9-l8c" customClass="UIButtonX" customModule="BigBrother" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="400" width="398" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="Light"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" name="Text"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="signUpButton:" destination="9eE-GL-2eO" eventType="touchUpInside" id="ji3-qZ-Lmn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="Secondary"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="Primary"/>
+                        <constraints>
+                            <constraint firstItem="MLy-zj-2ug" firstAttribute="leading" secondItem="f43-RT-Hji" secondAttribute="leading" constant="20" id="C3i-Rg-FlW"/>
+                            <constraint firstItem="MLy-zj-2ug" firstAttribute="top" secondItem="f43-RT-Hji" secondAttribute="top" constant="20" id="X1t-Y6-amg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="f43-RT-Hji"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="z45-9I-oEA" id="S6d-C4-R07"/>
+                        <outlet property="passwordField" destination="kyo-49-hnJ" id="byq-ET-p78"/>
+                        <outlet property="reenterPassword" destination="NQu-WG-kb4" id="0KN-SB-IfO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4y-T9-5n2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-107" y="94"/>
+            <point key="canvasLocation" x="-107.24637681159422" y="93.75"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="Light">
+            <color red="0.043137254901960784" green="0.15294117647058825" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Primary">
             <color red="0.061999998986721039" green="0.061999998986721039" blue="0.12399999797344208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Text">
-            <color red="0.84700000286102295" green="0.84799998998641968" blue="0.85500001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Secondary">
+            <color red="0.10400000214576721" green="0.12600000202655792" blue="0.23600000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Text">
             <color red="0.84700000286102295" green="0.84799998998641968" blue="0.85500001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

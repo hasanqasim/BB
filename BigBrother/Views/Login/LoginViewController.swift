@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     
@@ -15,15 +16,27 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: Any) {
         //Replace if statement with login logic
-        if emailField.text == "test@test.com" && passwordField.text == "1234"{
-            //performSegue(withIdentifier: "HomeSegue", sender: nil)
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let vc = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()
-            appDelegate.window?.rootViewController = vc
-        }
-        else {
+        guard let email = emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else{
             showAlert(message: "email or password is incorrect")
+            return}
+        guard let password = passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
+            showAlert(message: "email or password is incorrect")
+            return}
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if user != nil && error == nil {
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                let vc = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()
+                appDelegate.window?.rootViewController = vc
+            }else{
+                self.showAlert(message: "email or password is incorrect")
+            }
         }
+        
+            
+        
+            
+        
     }
     
     func showAlert(message: String){
