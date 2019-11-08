@@ -19,6 +19,7 @@
 		8F26570723702D0200F5D1C7 /* InteractionOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F26570623702D0200F5D1C7 /* InteractionOptionsViewController.swift */; };
 		8F265709237034C900F5D1C7 /* InteractionOptions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F265708237034C900F5D1C7 /* InteractionOptions.storyboard */; };
 		8F541BE92374445E00A6FF77 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F541BE82374445E00A6FF77 /* GoogleService-Info.plist */; };
+		8F541BEC2374F86000A6FF77 /* RecentVisitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F541BEB2374F86000A6FF77 /* RecentVisitCollectionViewCell.swift */; };
 		8F56276C236C40FB00058639 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F56276B236C40FB00058639 /* Home.storyboard */; };
 		8F56276E236C448D00058639 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F56276D236C448D00058639 /* Login.storyboard */; };
 		8F562770236C4E0500058639 /* UITextFieldX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56276F236C4E0500058639 /* UITextFieldX.swift */; };
@@ -51,6 +52,7 @@
 		8F26570623702D0200F5D1C7 /* InteractionOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionOptionsViewController.swift; sourceTree = "<group>"; };
 		8F265708237034C900F5D1C7 /* InteractionOptions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InteractionOptions.storyboard; sourceTree = "<group>"; };
 		8F541BE82374445E00A6FF77 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8F541BEB2374F86000A6FF77 /* RecentVisitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentVisitCollectionViewCell.swift; sourceTree = "<group>"; };
 		8F56276B236C40FB00058639 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		8F56276D236C448D00058639 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		8F56276F236C4E0500058639 /* UITextFieldX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldX.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		2E9FBF10236C1B7300C71549 /* BigBrother */ = {
 			isa = PBXGroup;
 			children = (
+				8F541BEA2374F81800A6FF77 /* Model */,
 				8F541BE82374445E00A6FF77 /* GoogleService-Info.plist */,
 				8F5E25C0236C325000C6699B /* Views */,
 				2E9FBF1D236C1B7400C71549 /* Info.plist */,
@@ -152,6 +155,14 @@
 				8F26570623702D0200F5D1C7 /* InteractionOptionsViewController.swift */,
 			);
 			path = InteractionOptions;
+			sourceTree = "<group>";
+		};
+		8F541BEA2374F81800A6FF77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F541BEB2374F86000A6FF77 /* RecentVisitCollectionViewCell.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8F562771236C559B00058639 /* Register */ = {
@@ -361,6 +372,7 @@
 				8F26570723702D0200F5D1C7 /* InteractionOptionsViewController.swift in Sources */,
 				8F5E25B8236C30D800C6699B /* UIImageViewX.swift in Sources */,
 				8F2656F9236D85BD00F5D1C7 /* IntroViewController.swift in Sources */,
+				8F541BEC2374F86000A6FF77 /* RecentVisitCollectionViewCell.swift in Sources */,
 				8F562770236C4E0500058639 /* UITextFieldX.swift in Sources */,
 				2E9FBF12236C1B7300C71549 /* AppDelegate.swift in Sources */,
 				8F5E25BB236C30D800C6699B /* UIViewX.swift in Sources */,
