@@ -18,37 +18,34 @@ class LoginViewController: UIViewController {
     @IBAction func loginButton(_ sender: Any) {
         //Replace if statement with login logic
         guard let email = emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else{
-            showAlert(message: "email or password is incorrect")
+            showAlert(title: "Error", message: "email or password is incorrect")
             return}
         guard let password = passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
-            showAlert(message: "email or password is incorrect")
+            showAlert(title: "Error", message: "email or password is incorrect")
             return}
-        
+        showSpinner()
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if user != nil && error == nil {
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 let vc = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()
+                self.removeSpinner()
                 appDelegate.window?.rootViewController = vc
             }else{
-                self.showAlert(message: "email or password is incorrect")
+                self.removeSpinner()
+                self.showAlert(title: "Error", message: "email or password is incorrect")
             }
         }
         
         
     }
     
-    func showAlert(message: String){
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
-        let action = UIAlertAction(title: "Try Again",
-                                   style: .default,
-                                   handler: nil)
-        alert.addAction(action)
-        self.present(alert, animated: true, completion: nil)
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emailField.delegate = self
+        passwordField.delegate = self
         //Setting up splashView
         let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "launch-logo")!,iconInitialSize: CGSize(width: 100, height: 100), backgroundColor: UIColor(named: "Primary")!)
         
@@ -64,4 +61,10 @@ class LoginViewController: UIViewController {
     
     
     
+}
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

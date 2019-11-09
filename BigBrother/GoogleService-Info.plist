@@ -3,34 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>482217495753-dklsk5tdne49fgomfahkunvo5u65mv25.apps.googleusercontent.com</string>
+	<string>850317390978-rjre320j3kjmn5g6bcdsmug8tpvmv9an.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.482217495753-dklsk5tdne49fgomfahkunvo5u65mv25</string>
+	<string>com.googleusercontent.apps.850317390978-rjre320j3kjmn5g6bcdsmug8tpvmv9an</string>
 	<key>API_KEY</key>
-	<string>AIzaSyB_yyugg3ZZEf3fL1gBLSORpYb8Rd3eT6g</string>
+	<string>AIzaSyAvCjDzvM8SaJ-FBVG0E93Ap9UwOKEigS8</string>
 	<key>GCM_SENDER_ID</key>
-	<string>482217495753</string>
+	<string>850317390978</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>edu.com.monash.BigBrother</string>
 	<key>PROJECT_ID</key>
-	<string>login-register-test-ebef1</string>
+	<string>facial-rekognition</string>
 	<key>STORAGE_BUCKET</key>
-	<string>login-register-test-ebef1.appspot.com</string>
+	<string>facial-rekognition.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:482217495753:ios:34ff918e1e6e19e214d118</string>
+	<string>1:850317390978:ios:cf303b4834191985fe309b</string>
 	<key>DATABASE_URL</key>
-	<string>https://login-register-test-ebef1.firebaseio.com</string>
+	<string>https://facial-rekognition.firebaseio.com</string>
 </dict>
 </plist>

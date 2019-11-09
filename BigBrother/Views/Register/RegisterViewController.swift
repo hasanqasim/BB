@@ -22,29 +22,30 @@ class RegisterViewController: UIViewController {
     
     @IBAction func signUpButton(_ sender: Any) {
         guard let email = emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else{
-            showAlert(message: "Email is invalid")
+            showAlert(title: "Error", message: "Email is invalid")
             return
         }
         if passwordField.text != reenterPassword.text {
-            showAlert(message: "Passwords don't match")
+            showAlert(title: "Error", message: "Passwords don't match")
             return
         }
         
         guard let password = passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
-            showAlert(message: "Password is invalid")
+            showAlert(title: "Error", message: "Password is invalid")
             return
         }
         
         if password.count < 6 {
-            showAlert(message: "Password should be atleast 6 characters long")
+            showAlert(title: "Error", message: "Password should be atleast 6 characters long")
             return
         }
-        
+        showSpinner()
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if user != nil && error == nil{
                 self.dismiss(animated: true, completion: nil)
             }else{
-                self.showAlert(message: error.debugDescription)
+                self.removeSpinner()
+                self.showAlert(title: "Error", message: error!.localizedDescription)
             }
         }
     }
@@ -53,17 +54,20 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        emailField.delegate = self
+        passwordField.delegate = self
+        reenterPassword.delegate = self
         // Do any additional setup after loading the view.
     }
     
 
-    func showAlert(message: String){
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
-        let action = UIAlertAction(title: "Try Again",
-                                   style: .default,
-                                   handler: nil)
-        alert.addAction(action)
-        self.present(alert, animated: true, completion: nil)
-    }
+    
 
+}
+
+extension RegisterViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

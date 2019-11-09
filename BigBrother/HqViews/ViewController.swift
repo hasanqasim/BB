@@ -59,6 +59,7 @@ class ViewController: UIViewController, DatabaseListener {
     }
     
     func onFirebaseReadingListChange(change: DatabaseChange, firebaseReading: [FirebaseReading]) {
+        
         firebaseReadingList = firebaseReading
         if firebaseReadingList.count != 0 {
             firebaseReadingList = firebaseReadingList.sorted(by: { $0.timestamp < $1.timestamp })

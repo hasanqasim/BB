@@ -12,14 +12,14 @@ import Firebase
 
 class HomeViewController: UIViewController {
     
+    weak var databaseController: DatabaseProtocol?
     
     @IBOutlet weak var recentCollectionView: UICollectionView!
     
     @IBOutlet weak var shineView: ThreePointGradient!
 
     @IBOutlet weak var liveStreamRef: UIButtonX!
-    @IBOutlet weak var interactionRef: UIButtonX!
-    @IBOutlet weak var contactsRef: UIButtonX!
+    
     
     @IBOutlet weak var bottomMenu: UIView!
     @IBOutlet weak var lightFill: UIViewX!
@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
         if lightFill.transform == CGAffineTransform.identity{
             UIView.animate(withDuration: 1, animations: {
                 self.lightFill.transform = CGAffineTransform(scaleX: 11, y: 11)
-                self.bottomMenu.transform = CGAffineTransform(translationX: 0, y: -107)
+                self.bottomMenu.transform = CGAffineTransform(translationX: 0, y: -117)
                 self.upButtonRef.transform = CGAffineTransform(rotationAngle: self.radians(180))
             }) { (true) in
                 UIView.animate(withDuration: 0.5) {
@@ -64,15 +64,19 @@ class HomeViewController: UIViewController {
         performSegue(withIdentifier: "interaction", sender: nil)
     }
     
-    var visits = [["default-profile", "Unknown"], ["default-profile", "Unknown"],["default-profile", "Unknown"], ["default-profile", "Unknown"],["default-profile", "Unknown"]]
+    var visits = [FirebaseReading]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //make clear navigation bar
+        //navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        databaseController = appDelegate.databaseController
         
         //Making the bottom menu button disappear
         liveStreamRef.alpha = 0
-        contactsRef.alpha = 0
-        interactionRef.alpha = 0
+        
         
         //Setting the data source for the collection view
         recentCollectionView.dataSource = self
@@ -88,12 +92,29 @@ class HomeViewController: UIViewController {
             print("Completed")
         }
         
-        animateShine()
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        databaseController?.addListener(listener: self)
+        //messageLabel.text = Data.firebaseReadingList[0].name
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        databaseController?.removeListener(listener: self)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animateShine()
     }
     
     
     func animateShine(){
+        self.shineView.alpha = 0
         UIView.animate(withDuration: 5, delay: 0, options: [.repeat,.autoreverse], animations: {
             self.shineView.alpha = 1
         })
@@ -106,8 +127,7 @@ class HomeViewController: UIViewController {
     func toggleButtonAlpha(){
         let alpha = CGFloat(liveStreamRef.alpha == 0 ? 1:0)
         liveStreamRef.alpha = alpha
-        contactsRef.alpha = alpha
-        interactionRef.alpha = alpha
+        
     }
     
 }
@@ -122,9 +142,17 @@ extension HomeViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentVisitCollectionViewCell", for: indexPath) as! RecentVisitCollectionViewCell
         let visit = visits[indexPath.item]
-        cell.imageView.image = UIImage(named: visit[0])
-        cell.nameField.text = visit[1]
+        cell.imageView.image = visit.image
+        cell.nameField.text = visit.name
         return cell
+    }
+}
+
+extension HomeViewController: DatabaseListener{
+    func onFirebaseReadingListChange(change: DatabaseChange, firebaseReading: [FirebaseReading]) {
+        visits = firebaseReading.sorted(by: { $0.timestamp > $1.timestamp })
+        visits = Array(visits.prefix(5))
+        recentCollectionView.reloadData()
     }
 }
 

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AcX-P0-3vH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="Z7J-wF-qi4">
+            <objects>
+                <viewController id="AcX-P0-3vH" customClass="DetailViewController" customModule="BigBrother" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y95-3V-UTh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="doL-UA-OB4" customClass="UIViewX" customModule="BigBrother" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="323" width="414" height="573"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="Secondary"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VfX-gI-AKK" customClass="UIImageViewX" customModule="BigBrother" customModuleProvider="target">
+                                <rect key="frame" x="25" y="94" width="364" height="364"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VfX-gI-AKK" secondAttribute="height" multiplier="1:1" id="mTl-6B-UMt"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsF-jy-wcm">
+                                <rect key="frame" x="50" y="522" width="314" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="E6k-oM-eCq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="30"/>
+                                <color key="textColor" name="Text"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibr-OJ-mXL" customClass="UIButtonX" customModule="BigBrother" customModuleProvider="target">
+                                <rect key="frame" x="50" y="714.5" width="314" height="44"/>
+                                <color key="backgroundColor" name="Light"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="OfE-sW-jC3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                <state key="normal" title="Add New Contact">
+                                    <color key="titleColor" name="Text"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addButton:" destination="AcX-P0-3vH" eventType="touchUpInside" id="U8V-gH-w0j"/>
+                                    <segue destination="NbA-ai-CwH" kind="presentation" identifier="AddView" id="hTL-OA-5to"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2j-Zs-LU5">
+                                <rect key="frame" x="50" y="612" width="314" height="22.5"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                <color key="textColor" name="Text"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="Primary"/>
+                        <constraints>
+                            <constraint firstItem="ibr-OJ-mXL" firstAttribute="leading" secondItem="RPS-bU-J4A" secondAttribute="leading" constant="50" id="5Vp-sD-tuq"/>
+                            <constraint firstItem="VfX-gI-AKK" firstAttribute="leading" secondItem="RPS-bU-J4A" secondAttribute="leading" constant="25" id="7U9-aZ-2yq"/>
+                            <constraint firstItem="RPS-bU-J4A" firstAttribute="trailing" secondItem="ibr-OJ-mXL" secondAttribute="trailing" constant="50" id="HE9-W1-9co"/>
+                            <constraint firstItem="RPS-bU-J4A" firstAttribute="trailing" secondItem="DsF-jy-wcm" secondAttribute="trailing" constant="50" id="Kq6-hv-BeK"/>
+                            <constraint firstItem="w2j-Zs-LU5" firstAttribute="leading" secondItem="RPS-bU-J4A" secondAttribute="leading" constant="50" id="OfP-tp-8JZ"/>
+                            <constraint firstItem="w2j-Zs-LU5" firstAttribute="top" secondItem="DsF-jy-wcm" secondAttribute="bottom" constant="56" id="TU7-UW-jET"/>
+                            <constraint firstItem="ibr-OJ-mXL" firstAttribute="top" secondItem="w2j-Zs-LU5" secondAttribute="bottom" constant="80" id="Tfo-Rh-31R"/>
+                            <constraint firstItem="DsF-jy-wcm" firstAttribute="top" secondItem="VfX-gI-AKK" secondAttribute="bottom" constant="64" id="WI2-nc-ZMK"/>
+                            <constraint firstItem="DsF-jy-wcm" firstAttribute="leading" secondItem="RPS-bU-J4A" secondAttribute="leading" constant="50" id="fks-Fq-YaQ"/>
+                            <constraint firstItem="RPS-bU-J4A" firstAttribute="trailing" secondItem="VfX-gI-AKK" secondAttribute="trailing" constant="25" id="nmO-9y-FaA"/>
+                            <constraint firstItem="VfX-gI-AKK" firstAttribute="top" secondItem="RPS-bU-J4A" secondAttribute="top" constant="50" id="qel-f9-KV6"/>
+                            <constraint firstItem="RPS-bU-J4A" firstAttribute="trailing" secondItem="w2j-Zs-LU5" secondAttribute="trailing" constant="50" id="y40-Nf-YvD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RPS-bU-J4A"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oc1-wp-u80"/>
+                    <connections>
+                        <outlet property="addButtonRef" destination="ibr-OJ-mXL" id="EDT-1d-G11"/>
+                        <outlet property="dateLabel" destination="w2j-Zs-LU5" id="psq-lX-gqP"/>
+                        <outlet property="imageView" destination="VfX-gI-AKK" id="Kd8-Bo-elM"/>
+                        <outlet property="nameLabel" destination="DsF-jy-wcm" id="wcy-Zi-bQZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B6c-F7-6Lt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3657.971014492754" y="134.59821428571428"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="Ich-1x-zSm">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="NbA-ai-CwH" customClass="AddViewController" customModule="BigBrother" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RuU-Pg-bRE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mfo-9O-qj9" customClass="UIViewX" customModule="BigBrother" customModuleProvider="target">
+                                <rect key="frame" x="53.5" y="346.5" width="307" height="257"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the name to save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYm-5a-QNG">
+                                        <rect key="frame" x="8" y="29" width="291" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23" id="3y7-Qu-Xk3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                        <color key="textColor" name="Text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="57B-Zo-GRX">
+                                        <rect key="frame" x="25" y="72" width="258" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="ag8-Vw-cAT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8Q-AO-hHb" customClass="UIButtonX" customModule="BigBrother" customModuleProvider="target">
+                                        <rect key="frame" x="25" y="127" width="258" height="44"/>
+                                        <color key="backgroundColor" name="Light"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="qYv-Vd-BTV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" name="Text"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="saveButton:" destination="NbA-ai-CwH" eventType="touchUpInside" id="kaf-hE-q9S"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOa-Bk-2VH" customClass="UIButtonX" customModule="BigBrother" customModuleProvider="target">
+                                        <rect key="frame" x="25" y="189" width="258" height="44"/>
+                                        <color key="backgroundColor" name="Light"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="lPj-bw-usk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" name="Text"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="cancelButton:" destination="NbA-ai-CwH" eventType="touchUpInside" id="nVP-rh-R5R"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="Secondary"/>
+                                <constraints>
+                                    <constraint firstItem="n8Q-AO-hHb" firstAttribute="top" secondItem="57B-Zo-GRX" secondAttribute="bottom" constant="21" id="2mT-xe-5yG"/>
+                                    <constraint firstItem="oYm-5a-QNG" firstAttribute="top" secondItem="Mfo-9O-qj9" secondAttribute="top" constant="29" id="Ezj-xU-Ma2"/>
+                                    <constraint firstItem="n8Q-AO-hHb" firstAttribute="leading" secondItem="Mfo-9O-qj9" secondAttribute="leading" constant="25" id="HzW-RD-dCd"/>
+                                    <constraint firstAttribute="trailing" secondItem="57B-Zo-GRX" secondAttribute="trailing" constant="24" id="SQa-6X-uqo"/>
+                                    <constraint firstAttribute="trailing" secondItem="nOa-Bk-2VH" secondAttribute="trailing" constant="24" id="UYF-Zb-5J2"/>
+                                    <constraint firstAttribute="trailing" secondItem="oYm-5a-QNG" secondAttribute="trailing" constant="8" id="Vu1-Nf-eE9"/>
+                                    <constraint firstAttribute="trailing" secondItem="n8Q-AO-hHb" secondAttribute="trailing" constant="24" id="WWx-wY-gwX"/>
+                                    <constraint firstItem="nOa-Bk-2VH" firstAttribute="top" secondItem="n8Q-AO-hHb" secondAttribute="bottom" constant="18" id="cge-zB-J56"/>
+                                    <constraint firstItem="nOa-Bk-2VH" firstAttribute="leading" secondItem="Mfo-9O-qj9" secondAttribute="leading" constant="25" id="nnK-K9-Mh4"/>
+                                    <constraint firstItem="57B-Zo-GRX" firstAttribute="leading" secondItem="Mfo-9O-qj9" secondAttribute="leading" constant="25" id="qVD-rA-gbB"/>
+                                    <constraint firstItem="57B-Zo-GRX" firstAttribute="top" secondItem="oYm-5a-QNG" secondAttribute="bottom" constant="20" id="xhV-f8-KGE"/>
+                                    <constraint firstItem="oYm-5a-QNG" firstAttribute="leading" secondItem="Mfo-9O-qj9" secondAttribute="leading" constant="8" id="yio-bk-6b3"/>
+                                    <constraint firstAttribute="width" constant="307" id="zBB-0g-P0N"/>
+                                    <constraint firstAttribute="height" constant="257" id="zvW-CR-xRD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mfo-9O-qj9" firstAttribute="centerX" secondItem="sGA-nu-XjH" secondAttribute="centerX" id="JBu-Nq-H4W"/>
+                            <constraint firstItem="Mfo-9O-qj9" firstAttribute="centerY" secondItem="sGA-nu-XjH" secondAttribute="centerY" id="o7b-jD-2AV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sGA-nu-XjH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ukp-iX-K3p"/>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="nameField" destination="57B-Zo-GRX" id="Hmr-W0-PLP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rDb-ZE-nbF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4488.4057971014499" y="134.59821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Light">
+            <color red="0.043137254901960784" green="0.15294117647058825" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="0.061999998986721039" green="0.061999998986721039" blue="0.12399999797344208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary">
+            <color red="0.10400000214576721" green="0.12600000202655792" blue="0.23600000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.84700000286102295" green="0.84799998998641968" blue="0.85500001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

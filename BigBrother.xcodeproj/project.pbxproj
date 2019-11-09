@@ -10,6 +10,9 @@
 		2E9FBF12236C1B7300C71549 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FBF11236C1B7300C71549 /* AppDelegate.swift */; };
 		2E9FBF19236C1B7400C71549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E9FBF18236C1B7400C71549 /* Assets.xcassets */; };
 		8F074848236C37910025CA72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9FBF1A236C1B7400C71549 /* LaunchScreen.storyboard */; };
+		8F19AC432376E0A000995386 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F19AC422376E0A000995386 /* AddViewController.swift */; };
+		8F19AC462376FEAE00995386 /* LiveStream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F19AC452376FEAE00995386 /* LiveStream.storyboard */; };
+		8F19AC482376FED700995386 /* LiveStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F19AC472376FED700995386 /* LiveStreamViewController.swift */; };
 		8F2656F7236D85A300F5D1C7 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2656F6236D85A300F5D1C7 /* Intro.storyboard */; };
 		8F2656F9236D85BD00F5D1C7 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2656F8236D85BD00F5D1C7 /* IntroViewController.swift */; };
 		8F2656FC236D8FB400F5D1C7 /* Scan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2656FB236D8FB400F5D1C7 /* Scan.storyboard */; };
@@ -18,7 +21,6 @@
 		8F265703236E78B400F5D1C7 /* InteractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F265702236E78B400F5D1C7 /* InteractionViewController.swift */; };
 		8F26570723702D0200F5D1C7 /* InteractionOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F26570623702D0200F5D1C7 /* InteractionOptionsViewController.swift */; };
 		8F265709237034C900F5D1C7 /* InteractionOptions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F265708237034C900F5D1C7 /* InteractionOptions.storyboard */; };
-		8F541BE92374445E00A6FF77 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F541BE82374445E00A6FF77 /* GoogleService-Info.plist */; };
 		8F541BEC2374F86000A6FF77 /* RecentVisitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F541BEB2374F86000A6FF77 /* RecentVisitCollectionViewCell.swift */; };
 		8F56276C236C40FB00058639 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F56276B236C40FB00058639 /* Home.storyboard */; };
 		8F56276E236C448D00058639 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F56276D236C448D00058639 /* Login.storyboard */; };
@@ -33,6 +35,13 @@
 		8F5E25BF236C312900C6699B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E25BE236C312900C6699B /* Images.xcassets */; };
 		8F5E25C4236C336500C6699B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E25C3236C336500C6699B /* HomeViewController.swift */; };
 		8F5E25C6236C337700C6699B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E25C5236C337700C6699B /* LoginViewController.swift */; };
+		8FB025852376724F00AAA474 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB025842376724F00AAA474 /* UIViewControllerExtension.swift */; };
+		8FB02587237698A100AAA474 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FB02586237698A000AAA474 /* GoogleService-Info.plist */; };
+		8FB0258A2376A42700AAA474 /* VisitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB025892376A42700AAA474 /* VisitListViewController.swift */; };
+		8FB0258C2376AA2A00AAA474 /* VisitListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB0258B2376AA2A00AAA474 /* VisitListTableViewCell.swift */; };
+		8FB0258E2376C3BC00AAA474 /* VisitList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB0258D2376C3BB00AAA474 /* VisitList.storyboard */; };
+		8FB025912376CDD700AAA474 /* DetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB025902376CDD700AAA474 /* DetailView.storyboard */; };
+		8FB025932376CF5E00AAA474 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB025922376CF5E00AAA474 /* DetailViewController.swift */; };
 		A652FCD22375D9B300579D8F /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A652FCD12375D9B300579D8F /* MulticastDelegate.swift */; };
 		A652FCD42375D9E300579D8F /* DatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A652FCD32375D9E300579D8F /* DatabaseProtocol.swift */; };
 		A652FCD82375DA3900579D8F /* FirebaseReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A652FCD72375DA3900579D8F /* FirebaseReading.swift */; };
@@ -40,7 +49,7 @@
 		A652FCDD2375DB8300579D8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A652FCDC2375DB8300579D8F /* ViewController.swift */; };
 		A652FCDF2375DB9200579D8F /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A652FCDE2375DB9200579D8F /* StreamViewController.swift */; };
 		A652FCE12375DBB600579D8F /* hq.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A652FCE02375DBB600579D8F /* hq.storyboard */; };
-		A652FCE32375DD3200579D8F /* D.swift in Sources */ = {isa = PBXBuildFile; fileRef = A652FCE22375DD3200579D8F /* D.swift */; };
+		A652FCE32375DD3200579D8F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A652FCE22375DD3200579D8F /* Data.swift */; };
 		FF9D0FFF6FFE1BDBEF8B87EF /* Pods_BigBrother.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC268C1FD9A45938A77DE48 /* Pods_BigBrother.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +60,9 @@
 		2E9FBF1B236C1B7400C71549 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E9FBF1D236C1B7400C71549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DCE8B5DC6327A5E777BB484 /* Pods-BigBrother.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBrother.debug.xcconfig"; path = "Target Support Files/Pods-BigBrother/Pods-BigBrother.debug.xcconfig"; sourceTree = "<group>"; };
+		8F19AC422376E0A000995386 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		8F19AC452376FEAE00995386 /* LiveStream.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LiveStream.storyboard; sourceTree = "<group>"; };
+		8F19AC472376FED700995386 /* LiveStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamViewController.swift; sourceTree = "<group>"; };
 		8F2656F6236D85A300F5D1C7 /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 		8F2656F8236D85BD00F5D1C7 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		8F2656FB236D8FB400F5D1C7 /* Scan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scan.storyboard; sourceTree = "<group>"; };
@@ -59,7 +71,6 @@
 		8F265702236E78B400F5D1C7 /* InteractionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionViewController.swift; sourceTree = "<group>"; };
 		8F26570623702D0200F5D1C7 /* InteractionOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionOptionsViewController.swift; sourceTree = "<group>"; };
 		8F265708237034C900F5D1C7 /* InteractionOptions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InteractionOptions.storyboard; sourceTree = "<group>"; };
-		8F541BE82374445E00A6FF77 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8F541BEB2374F86000A6FF77 /* RecentVisitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentVisitCollectionViewCell.swift; sourceTree = "<group>"; };
 		8F56276B236C40FB00058639 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		8F56276D236C448D00058639 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -74,6 +85,13 @@
 		8F5E25BE236C312900C6699B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8F5E25C3236C336500C6699B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8F5E25C5236C337700C6699B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8FB025842376724F00AAA474 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		8FB02586237698A000AAA474 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8FB025892376A42700AAA474 /* VisitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitListViewController.swift; sourceTree = "<group>"; };
+		8FB0258B2376AA2A00AAA474 /* VisitListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitListTableViewCell.swift; sourceTree = "<group>"; };
+		8FB0258D2376C3BB00AAA474 /* VisitList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VisitList.storyboard; sourceTree = "<group>"; };
+		8FB025902376CDD700AAA474 /* DetailView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailView.storyboard; sourceTree = "<group>"; };
+		8FB025922376CF5E00AAA474 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A652FCD12375D9B300579D8F /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		A652FCD32375D9E300579D8F /* DatabaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseProtocol.swift; sourceTree = "<group>"; };
 		A652FCD72375DA3900579D8F /* FirebaseReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReading.swift; sourceTree = "<group>"; };
@@ -81,7 +99,7 @@
 		A652FCDC2375DB8300579D8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A652FCDE2375DB9200579D8F /* StreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
 		A652FCE02375DBB600579D8F /* hq.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = hq.storyboard; sourceTree = "<group>"; };
-		A652FCE22375DD3200579D8F /* D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D.swift; sourceTree = "<group>"; };
+		A652FCE22375DD3200579D8F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		CCC268C1FD9A45938A77DE48 /* Pods_BigBrother.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BigBrother.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63DFFD5ECCE7DB4DAB1B446 /* Pods-BigBrother.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBrother.release.xcconfig"; path = "Target Support Files/Pods-BigBrother/Pods-BigBrother.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,15 +147,24 @@
 		2E9FBF10236C1B7300C71549 /* BigBrother */ = {
 			isa = PBXGroup;
 			children = (
+				8FB02586237698A000AAA474 /* GoogleService-Info.plist */,
 				A652FCDB2375DB5600579D8F /* HqViews */,
 				A652FCD62375DA0800579D8F /* Data */,
 				A652FCD02375D98900579D8F /* Database */,
 				8F541BEA2374F81800A6FF77 /* Model */,
-				8F541BE82374445E00A6FF77 /* GoogleService-Info.plist */,
 				8F5E25C0236C325000C6699B /* Views */,
 				2E9FBF1D236C1B7400C71549 /* Info.plist */,
 			);
 			path = BigBrother;
+			sourceTree = "<group>";
+		};
+		8F19AC442376FC5B00995386 /* LiveStream */ = {
+			isa = PBXGroup;
+			children = (
+				8F19AC452376FEAE00995386 /* LiveStream.storyboard */,
+				8F19AC472376FED700995386 /* LiveStreamViewController.swift */,
+			);
+			path = LiveStream;
 			sourceTree = "<group>";
 		};
 		8F2656F5236D858800F5D1C7 /* Intro */ = {
@@ -180,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				8F541BEB2374F86000A6FF77 /* RecentVisitCollectionViewCell.swift */,
+				8FB0258B2376AA2A00AAA474 /* VisitListTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,6 +240,7 @@
 				8F5E25B4236C30D800C6699B /* UIImageViewX.swift */,
 				8F5E25B7236C30D800C6699B /* UIViewX.swift */,
 				8F56276F236C4E0500058639 /* UITextFieldX.swift */,
+				8FB025842376724F00AAA474 /* UIViewControllerExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -219,6 +248,9 @@
 		8F5E25C0236C325000C6699B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8F19AC442376FC5B00995386 /* LiveStream */,
+				8FB0258F2376CDB000AAA474 /* DetailView */,
+				8FB025882376A3EA00AAA474 /* VisitList */,
 				8F26570523702CDC00F5D1C7 /* InteractionOptions */,
 				8F2656FF236E787B00F5D1C7 /* Interaction */,
 				8F2656FA236D8F9800F5D1C7 /* Scan */,
@@ -250,6 +282,25 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		8FB025882376A3EA00AAA474 /* VisitList */ = {
+			isa = PBXGroup;
+			children = (
+				8FB0258D2376C3BB00AAA474 /* VisitList.storyboard */,
+				8FB025892376A42700AAA474 /* VisitListViewController.swift */,
+			);
+			path = VisitList;
+			sourceTree = "<group>";
+		};
+		8FB0258F2376CDB000AAA474 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				8FB025902376CDD700AAA474 /* DetailView.storyboard */,
+				8FB025922376CF5E00AAA474 /* DetailViewController.swift */,
+				8F19AC422376E0A000995386 /* AddViewController.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
 		A652FCD02375D98900579D8F /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				A652FCD72375DA3900579D8F /* FirebaseReading.swift */,
+				A652FCE22375DD3200579D8F /* Data.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -274,7 +326,6 @@
 				A652FCDC2375DB8300579D8F /* ViewController.swift */,
 				A652FCDE2375DB9200579D8F /* StreamViewController.swift */,
 				A652FCE02375DBB600579D8F /* hq.storyboard */,
-				A652FCE22375DD3200579D8F /* D.swift */,
 			);
 			path = HqViews;
 			sourceTree = "<group>";
@@ -347,13 +398,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FB02587237698A100AAA474 /* GoogleService-Info.plist in Resources */,
 				8F074848236C37910025CA72 /* LaunchScreen.storyboard in Resources */,
 				8F56276E236C448D00058639 /* Login.storyboard in Resources */,
 				8F265709237034C900F5D1C7 /* InteractionOptions.storyboard in Resources */,
+				8FB0258E2376C3BC00AAA474 /* VisitList.storyboard in Resources */,
 				8F5E25BF236C312900C6699B /* Images.xcassets in Resources */,
 				8F265701236E789900F5D1C7 /* Interaction.storyboard in Resources */,
-				8F541BE92374445E00A6FF77 /* GoogleService-Info.plist in Resources */,
 				A652FCE12375DBB600579D8F /* hq.storyboard in Resources */,
+				8F19AC462376FEAE00995386 /* LiveStream.storyboard in Resources */,
+				8FB025912376CDD700AAA474 /* DetailView.storyboard in Resources */,
 				8F2656F7236D85A300F5D1C7 /* Intro.storyboard in Resources */,
 				8F56276C236C40FB00058639 /* Home.storyboard in Resources */,
 				8F5E25BD236C310A00C6699B /* Colors.xcassets in Resources */,
@@ -414,6 +468,7 @@
 			files = (
 				A652FCDF2375DB9200579D8F /* StreamViewController.swift in Sources */,
 				A652FCDA2375DA8800579D8F /* FirebaseController.swift in Sources */,
+				8FB025932376CF5E00AAA474 /* DetailViewController.swift in Sources */,
 				A652FCDD2375DB8300579D8F /* ViewController.swift in Sources */,
 				8F562773236C55CB00058639 /* RegisterViewController.swift in Sources */,
 				8F5E25C6236C337700C6699B /* LoginViewController.swift in Sources */,
@@ -425,13 +480,18 @@
 				8F26570723702D0200F5D1C7 /* InteractionOptionsViewController.swift in Sources */,
 				A652FCD42375D9E300579D8F /* DatabaseProtocol.swift in Sources */,
 				8F5E25B8236C30D800C6699B /* UIImageViewX.swift in Sources */,
+				8FB0258C2376AA2A00AAA474 /* VisitListTableViewCell.swift in Sources */,
 				8F2656F9236D85BD00F5D1C7 /* IntroViewController.swift in Sources */,
 				8F541BEC2374F86000A6FF77 /* RecentVisitCollectionViewCell.swift in Sources */,
-				A652FCE32375DD3200579D8F /* D.swift in Sources */,
+				8FB0258A2376A42700AAA474 /* VisitListViewController.swift in Sources */,
+				A652FCE32375DD3200579D8F /* Data.swift in Sources */,
 				A652FCD82375DA3900579D8F /* FirebaseReading.swift in Sources */,
 				8F562770236C4E0500058639 /* UITextFieldX.swift in Sources */,
 				2E9FBF12236C1B7300C71549 /* AppDelegate.swift in Sources */,
+				8F19AC482376FED700995386 /* LiveStreamViewController.swift in Sources */,
 				8F5E25BB236C30D800C6699B /* UIViewX.swift in Sources */,
+				8FB025852376724F00AAA474 /* UIViewControllerExtension.swift in Sources */,
+				8F19AC432376E0A000995386 /* AddViewController.swift in Sources */,
 				8F5E25C4236C336500C6699B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
