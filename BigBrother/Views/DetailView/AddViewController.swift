@@ -21,6 +21,7 @@ class AddViewController: UIViewController {
         if name == ""{
             removeSpinner()
             showAlert(title: "Error", message: "Invalid name", action: "Dismiss")
+            return
         }
         
         if let data = visit.image!.jpegData(compressionQuality: 0.7) {
@@ -28,21 +29,33 @@ class AddViewController: UIViewController {
                 let transferUtility = AWSS3TransferUtility.default()
                 let S3BucketName = "bigbrother-faces"
                 let expression = AWSS3TransferUtilityUploadExpression()
-                let newAWSEntry = "Hugh"
+                let newAWSEntry = name!
                 let rNumber = Int.random(in: 0..<10)
                 let key = "\(newAWSEntry)/\(rNumber).jpeg"
                 transferUtility.uploadData(data, bucket: S3BucketName, key: key, contentType: "image/jpeg", expression: expression) { (task, error) in
                     if let error = error {
                         print(error.localizedDescription)
-                        self.removeSpinner()
+                        DispatchQueue.main.async {
+                            self.removeSpinner()
+                            self.showAlert(title: "Error", message: error.localizedDescription)
+                        }
                         return
                     }else{
-                        self.removeSpinner()
+                        DispatchQueue.main.async {
+                            self.removeSpinner()
+                            let alert = UIAlertController(title: "Success", message: "New entry has been added", preferredStyle: UIAlertController.Style.alert)
+                            let action = UIAlertAction(title: "dismiss", style: .default) { (success) in
+                                self.dismiss(animated: true, completion: nil)
+                            }
+                            alert.addAction(action)
+                            self.present(alert, animated: true, completion: nil)
+                        }
                         //TODO: pop to root home view
                     }
                 }
             })
         }
+        removeSpinner()
     }
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)

@@ -30,11 +30,12 @@ class DetailViewController: UIViewController {
         if visit.name != ""{
             let dateFormatterPrint = DateFormatter()
             dateFormatterPrint.dateFormat = "HH:mm MMM dd,yyyy"
+            dateFormatterPrint.timeZone = TimeZone(abbreviation: "GMT")
             imageView.image = visit.image
             nameLabel.text = visit.name
             dateLabel.text = "Detected Time: \(dateFormatterPrint.string(from: visit.timestamp))"
         }
-        if visit.name != "unknown" && visit.name != "undetected"{
+        if visit.name != "unknown" {
             addButtonRef.alpha = 0
         }
         

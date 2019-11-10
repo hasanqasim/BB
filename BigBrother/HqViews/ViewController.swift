@@ -32,6 +32,7 @@ class ViewController: UIViewController, DatabaseListener {
         }
         
         if let data = image.jpegData(compressionQuality: 0.7) {
+            var x = false
             DispatchQueue.main.async(execute: {
                 let transferUtility = AWSS3TransferUtility.default()
                 let S3BucketName = "bigbrother-faces"
@@ -41,11 +42,17 @@ class ViewController: UIViewController, DatabaseListener {
                 let key = "\(newAWSEntry)/\(rNumber).jpeg"
                 transferUtility.uploadData(data, bucket: S3BucketName, key: key, contentType: "image/jpeg", expression: expression) { (task, error) in
                     if let error = error {
+                        
                         print(error.localizedDescription)
                         return
+                    }else{
+                        x=true
                     }
                 }
             })
+            if x{
+                print("success")
+            }
         }
         
     }

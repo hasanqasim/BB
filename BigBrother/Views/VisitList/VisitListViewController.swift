@@ -13,6 +13,8 @@ class VisitListViewController: UIViewController {
     weak var databaseController: DatabaseProtocol?
     var visits = [FirebaseReading]()
     var filteredVisits = [FirebaseReading]()
+    
+    var time = Date()
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -85,6 +87,17 @@ extension VisitListViewController: UITableViewDataSource, UITableViewDelegate{
         let viewController = UIStoryboard(name: "DetailView", bundle: nil).instantiateInitialViewController() as! DetailViewController
         viewController.visit = filteredVisits[indexPath.row]
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath){
+        if time.timeIntervalSinceNow < -2 {
+            cell.layer.transform = CATransform3DTranslate(CATransform3DIdentity, 0, 50, 0)
+            cell.alpha = 0
+            UIView.animate(withDuration: 0.75){
+                cell.layer.transform = CATransform3DIdentity
+                cell.alpha = 1
+            }
+        }
     }
     
 }

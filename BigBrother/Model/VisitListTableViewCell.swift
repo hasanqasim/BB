@@ -19,6 +19,7 @@ class VisitListTableViewCell: UITableViewCell {
     func setValue(_ visit: FirebaseReading){
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "HH:mm MMM dd,yyyy"
+        dateFormatterPrint.timeZone = TimeZone(abbreviation: "GMT")
         picView.image = visit.image
         nameLabel.text = visit.name
         dateLabel.text = dateFormatterPrint.string(from: visit.timestamp)

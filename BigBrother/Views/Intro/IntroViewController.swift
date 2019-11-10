@@ -12,6 +12,8 @@ class IntroViewController: UIViewController {
 
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var messageLabel2: UILabel!
+    @IBOutlet weak var messageLabel3: UILabel!
     
     @IBAction func scanButton(_ sender: Any) {
         performSegue(withIdentifier: "Scan", sender: nil)
@@ -30,6 +32,8 @@ class IntroViewController: UIViewController {
     func animateViews(){
         welcomeLabel.alpha = 0
         messageLabel.alpha = 0
+        messageLabel2.alpha = 0
+        messageLabel3.alpha = 0
         scanButtonRef.alpha = 0
         
         UIView.animate(withDuration: 0.5, delay: 1, options: [], animations: {
@@ -37,6 +41,8 @@ class IntroViewController: UIViewController {
         })
         UIView.animate(withDuration: 0.5, delay: 3, options: [], animations: {
             self.messageLabel.alpha = 1
+            self.messageLabel2.alpha = 1
+            self.messageLabel3.alpha = 1
         })
         UIView.animate(withDuration: 1, delay: 5, options: [], animations: {
             self.scanButtonRef.alpha = 1

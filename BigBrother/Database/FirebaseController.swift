@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class FirebaseController: NSObject, DatabaseProtocol {
-    let ID = "b8:27:eb:bb:84:9b"
+    var ID = "b8:27:eb:bb:84:9b"
     
     var listeners = MulticastDelegate<DatabaseListener>()
     var authController: Auth
@@ -31,6 +31,10 @@ class FirebaseController: NSObject, DatabaseProtocol {
         //firebaseReadingList = [FirebaseReading]()
         
         super.init()
+        
+        if UserDefaults.standard.value(forKey: "deviceID") as? String != nil{
+            ID = UserDefaults.standard.value(forKey: "deviceID") as! String 
+        }
         
         authController.signInAnonymously() { (authResult, error) in
             guard authResult != nil else {

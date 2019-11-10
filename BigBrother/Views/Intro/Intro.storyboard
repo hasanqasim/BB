@@ -47,25 +47,35 @@
                                 <rect key="frame" x="0.0" y="324" width="414" height="572"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to BigBrother" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeU-oz-dM8">
-                                        <rect key="frame" x="8" y="69" width="398" height="40"/>
+                                        <rect key="frame" x="8" y="50" width="398" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="UHW-Fp-GCe"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="30"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="30"/>
                                         <color key="textColor" name="Text"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan the bar code on the device to register it" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh0-sC-chB">
-                                        <rect key="frame" x="8" y="158" width="398" height="85"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="85" id="Uqu-3l-qCP"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A smart IoT enabled iOS application with video streaming and image capture with facial recognition on motion detection." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh0-sC-chB">
+                                        <rect key="frame" x="8" y="130" width="398" height="70.5"/>
                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="21"/>
                                         <color key="textColor" name="Text"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XY9-kA-4tw">
+                                        <rect key="frame" x="8" y="220.5" width="398" height="94"/>
+                                        <string key="text">The app gives you the option to view recent visitors, all visitors, add unknown visitors for recognition. It also has a UI to view the live video stream.</string>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="21"/>
+                                        <color key="textColor" name="Text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan the bar code on the device to get started" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6j-E2-3GW">
+                                        <rect key="frame" x="8" y="334.5" width="398" height="47"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
+                                        <color key="textColor" name="Text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qx7-rA-zh6" customClass="UIButtonX" customModule="BigBrother" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="380" width="398" height="42"/>
+                                        <rect key="frame" x="8" y="411.5" width="398" height="42"/>
                                         <color key="backgroundColor" name="Light"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="cPa-xT-bXR"/>
@@ -86,14 +96,20 @@
                                 </subviews>
                                 <color key="backgroundColor" name="Secondary"/>
                                 <constraints>
+                                    <constraint firstItem="b6j-E2-3GW" firstAttribute="leading" secondItem="mb5-Cx-tJd" secondAttribute="leading" constant="8" id="8hd-Qk-ca7"/>
                                     <constraint firstAttribute="height" constant="572" id="H1v-7x-562"/>
-                                    <constraint firstItem="gh0-sC-chB" firstAttribute="top" secondItem="TeU-oz-dM8" secondAttribute="bottom" constant="49" id="IHC-ae-iqN"/>
+                                    <constraint firstItem="XY9-kA-4tw" firstAttribute="leading" secondItem="mb5-Cx-tJd" secondAttribute="leading" constant="8" id="Hpd-SN-fIz"/>
+                                    <constraint firstItem="gh0-sC-chB" firstAttribute="top" secondItem="TeU-oz-dM8" secondAttribute="bottom" constant="40" id="IHC-ae-iqN"/>
                                     <constraint firstItem="TeU-oz-dM8" firstAttribute="leading" secondItem="mb5-Cx-tJd" secondAttribute="leading" constant="8" id="Lu1-EY-oxg"/>
-                                    <constraint firstItem="TeU-oz-dM8" firstAttribute="top" secondItem="mb5-Cx-tJd" secondAttribute="top" constant="69" id="QEm-ck-mAn"/>
+                                    <constraint firstAttribute="trailing" secondItem="XY9-kA-4tw" secondAttribute="trailing" constant="8" id="PcD-5W-JTP"/>
+                                    <constraint firstItem="TeU-oz-dM8" firstAttribute="top" secondItem="mb5-Cx-tJd" secondAttribute="top" constant="50" id="QEm-ck-mAn"/>
+                                    <constraint firstAttribute="trailing" secondItem="b6j-E2-3GW" secondAttribute="trailing" constant="8" id="RrN-HS-fvZ"/>
                                     <constraint firstAttribute="trailing" secondItem="gh0-sC-chB" secondAttribute="trailing" constant="8" id="TWu-pm-DwC"/>
-                                    <constraint firstAttribute="bottom" secondItem="qx7-rA-zh6" secondAttribute="bottom" constant="150" id="XPU-aZ-rk6"/>
+                                    <constraint firstItem="XY9-kA-4tw" firstAttribute="top" secondItem="gh0-sC-chB" secondAttribute="bottom" constant="20" id="Tqj-qn-3Ww"/>
+                                    <constraint firstItem="qx7-rA-zh6" firstAttribute="top" secondItem="b6j-E2-3GW" secondAttribute="bottom" constant="30" id="WER-iX-Xzp"/>
                                     <constraint firstItem="gh0-sC-chB" firstAttribute="leading" secondItem="mb5-Cx-tJd" secondAttribute="leading" constant="8" id="ZE8-9l-ZGS"/>
                                     <constraint firstItem="qx7-rA-zh6" firstAttribute="leading" secondItem="mb5-Cx-tJd" secondAttribute="leading" constant="8" id="aZU-Mp-7l8"/>
+                                    <constraint firstItem="b6j-E2-3GW" firstAttribute="top" secondItem="XY9-kA-4tw" secondAttribute="bottom" constant="20" id="bRp-Wv-D2L"/>
                                     <constraint firstAttribute="trailing" secondItem="TeU-oz-dM8" secondAttribute="trailing" constant="8" id="kB4-yd-B5O"/>
                                     <constraint firstAttribute="trailing" secondItem="qx7-rA-zh6" secondAttribute="trailing" constant="8" id="tx3-7o-xFQ"/>
                                 </constraints>
@@ -116,6 +132,8 @@
                     </view>
                     <connections>
                         <outlet property="messageLabel" destination="gh0-sC-chB" id="hTI-yG-KMQ"/>
+                        <outlet property="messageLabel2" destination="XY9-kA-4tw" id="665-CI-aRr"/>
+                        <outlet property="messageLabel3" destination="b6j-E2-3GW" id="pQO-UI-2Da"/>
                         <outlet property="scanButtonRef" destination="qx7-rA-zh6" id="Bqf-PM-zOZ"/>
                         <outlet property="welcomeLabel" destination="TeU-oz-dM8" id="i9U-cY-500"/>
                         <segue destination="Xpe-2n-zUq" kind="presentation" identifier="Scan" id="g9D-fA-nG4"/>

@@ -29,6 +29,7 @@ class LiveStreamViewController: UIViewController {
         let url = URL(string: "http://192.168.43.227:8910/video_feed")
         stream.contentURL = url
         stream.play() // Play the stream
+        
     }
     
 
