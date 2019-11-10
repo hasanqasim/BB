@@ -6,6 +6,8 @@
 //  Copyright © 2019 M Rahman. All rights reserved.
 //
 
+// Code reference for background fetch: https://stackoverflow.com/questions/44313278/ios10-background-fetch
+
 import UIKit
 import Firebase
 import AWSS3
@@ -31,13 +33,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
        
         var storyboard: UIStoryboard
-        /*if UserDefaults.standard.value(forKey: "deviceID") as? String == nil {
+        if UserDefaults.standard.value(forKey: "deviceID") as? String == nil {
             storyboard = UIStoryboard(name: "Intro", bundle: nil)
         }
         else {
             storyboard = UIStoryboard(name: "Login", bundle: nil)
-        }*/
-        storyboard = UIStoryboard(name: "Login", bundle: nil)
+        }
+        //storyboard = UIStoryboard(name: "Login", bundle: nil)
         let vc = storyboard.instantiateInitialViewController()
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()

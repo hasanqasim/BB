@@ -6,6 +6,8 @@
 //  Copyright © 2019 M Rahman. All rights reserved.
 //
 
+// Reference for this code sections: https://www.youtube.com/watch?v=4Zf9dHDJ2yU
+
 import UIKit
 import AVFoundation
 

@@ -6,6 +6,8 @@
 //  Copyright © 2019 M Rahman. All rights reserved.
 //
 
+//This class was implemented but never used
+
 import UIKit
 
 class InteractionOptionsViewController: UIViewController {

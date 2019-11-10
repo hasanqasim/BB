@@ -68,6 +68,7 @@ extension VisitListViewController: DatabaseListener{
     
 }
 
+// for the tableview delegate methods
 
 extension VisitListViewController: UITableViewDataSource, UITableViewDelegate{
     
@@ -89,6 +90,8 @@ extension VisitListViewController: UITableViewDataSource, UITableViewDelegate{
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
+    //used this only for animating the tableviews
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath){
         if time.timeIntervalSinceNow < -2 {
             cell.layer.transform = CATransform3DTranslate(CATransform3DIdentity, 0, 50, 0)
@@ -101,6 +104,8 @@ extension VisitListViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
 }
+
+// for search bar delegate methods
 
 extension VisitListViewController: UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {

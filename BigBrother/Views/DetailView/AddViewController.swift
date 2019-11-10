@@ -18,12 +18,13 @@ class AddViewController: UIViewController {
     @IBAction func saveButton(_ sender: Any) {
         showSpinner()
         let name = nameField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        //check if name is empty
         if name == ""{
             removeSpinner()
             showAlert(title: "Error", message: "Invalid name", action: "Dismiss")
             return
         }
-        
+        //proceed with storing the image in AWSS3 with name label
         if let data = visit.image!.jpegData(compressionQuality: 0.7) {
             DispatchQueue.main.async(execute: {
                 let transferUtility = AWSS3TransferUtility.default()

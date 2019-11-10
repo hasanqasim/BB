@@ -55,7 +55,7 @@
                                         <color key="textColor" name="Text"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A smart IoT enabled iOS application with video streaming and image capture with facial recognition on motion detection." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh0-sC-chB">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A smart IoT enabled iOS application for video streaming and image capturing with facial recognition on motion detection." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh0-sC-chB">
                                         <rect key="frame" x="8" y="130" width="398" height="70.5"/>
                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="21"/>
                                         <color key="textColor" name="Text"/>

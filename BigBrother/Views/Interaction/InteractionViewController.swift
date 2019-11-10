@@ -6,6 +6,8 @@
 //  Copyright © 2019 M Rahman. All rights reserved.
 //
 
+// this class is implemented but never used
+
 import UIKit
 
 class InteractionViewController: UIViewController {

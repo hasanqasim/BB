@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //checking if there is no visitor name then skip everything
         if visit.name != ""{
             let dateFormatterPrint = DateFormatter()
             dateFormatterPrint.dateFormat = "HH:mm MMM dd,yyyy"
@@ -35,6 +35,7 @@ class DetailViewController: UIViewController {
             nameLabel.text = visit.name
             dateLabel.text = "Detected Time: \(dateFormatterPrint.string(from: visit.timestamp))"
         }
+        //show the add button only if there is an unknown face
         if visit.name != "unknown" {
             addButtonRef.alpha = 0
         }
