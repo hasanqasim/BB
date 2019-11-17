@@ -25,27 +25,39 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var lightFill: UIViewX!
     @IBOutlet weak var upButtonRef: UIButtonX!
     
+    
+    // animates the menu into view
+    fileprivate func animateIn() {
+        UIView.animate(withDuration: 1, animations: {
+            self.lightFill.transform = CGAffineTransform(scaleX: 11, y: 11)
+            self.bottomMenu.transform = CGAffineTransform(translationX: 0, y: -117)
+            self.upButtonRef.transform = CGAffineTransform(rotationAngle: self.radians(180))
+        }) { (true) in
+            UIView.animate(withDuration: 0.5) {
+                self.toggleButtonAlpha()
+            }
+        }
+    }
+    
+    
+    // animates the view out of view
+    fileprivate func animateIdentity() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.toggleButtonAlpha()
+        }) { (true) in
+            UIView.animate(withDuration: 1) {
+                self.lightFill.transform = .identity
+                self.bottomMenu.transform = .identity
+                self.upButtonRef.transform = .identity
+            }
+        }
+    }
+    
     @IBAction func upButton(_ sender: Any) {
         if lightFill.transform == CGAffineTransform.identity{
-            UIView.animate(withDuration: 1, animations: {
-                self.lightFill.transform = CGAffineTransform(scaleX: 11, y: 11)
-                self.bottomMenu.transform = CGAffineTransform(translationX: 0, y: -117)
-                self.upButtonRef.transform = CGAffineTransform(rotationAngle: self.radians(180))
-            }) { (true) in
-                UIView.animate(withDuration: 0.5) {
-                    self.toggleButtonAlpha()
-                }
-            }
+            animateIn()
         }else{
-            UIView.animate(withDuration: 0.5, animations: {
-                self.toggleButtonAlpha()
-            }) { (true) in
-                UIView.animate(withDuration: 1) {
-                    self.lightFill.transform = .identity
-                    self.bottomMenu.transform = .identity
-                    self.upButtonRef.transform = .identity
-                }
-            }
+            animateIdentity()
         }
         
         
@@ -99,6 +111,9 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         databaseController?.addListener(listener: self)
+        if lightFill.transform != CGAffineTransform.identity{
+            animateIdentity()
+        }
         //messageLabel.text = Data.firebaseReadingList[0].name
     }
     

@@ -44,14 +44,14 @@ class AddViewController: UIViewController {
                     }else{
                         DispatchQueue.main.async {
                             self.removeSpinner()
-                            let alert = UIAlertController(title: "Success", message: "New entry has been added", preferredStyle: UIAlertController.Style.alert)
+                            let alert = UIAlertController(title: "Success", message: "New entry has been added. It will be recognized as \(name!) next time.", preferredStyle: UIAlertController.Style.alert)
                             let action = UIAlertAction(title: "dismiss", style: .default) { (success) in
                                 self.dismiss(animated: true, completion: nil)
                             }
                             alert.addAction(action)
                             self.present(alert, animated: true, completion: nil)
                         }
-                        //TODO: pop to root home view
+                        
                     }
                 }
             })
