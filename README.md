@@ -2,6 +2,8 @@
 
 BigBrother was the final project for our FIT5140 unit. BigBrother is an iOS application for an IoT surveillence system with motion detection and facial recognition.
 
+![Intro](https://user-images.githubusercontent.com/18983389/100294223-4c098380-2fda-11eb-8d63-3cf72f8fbf7d.gif)
+
 ## What I learned
 * Programme a Flask web server in python to view Raspberry Pi camera feed on the iOS application.
 *	Programme a Raspberry Pi server in python for motion detection and image capturing.
